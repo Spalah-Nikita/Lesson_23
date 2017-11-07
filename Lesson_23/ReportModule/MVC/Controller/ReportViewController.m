@@ -65,6 +65,18 @@
     return cell;
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.model removeReportAtIndex:indexPath.row];
+    }
+}
+
 #pragma mark - Report View Input Protocol
 
 - (void)addReportButtonWasTapped
@@ -75,6 +87,11 @@
 #pragma mark - Report Model Output Protocol
 
 - (void)dataDidReload
+{
+    [self.contentView.tableView reloadData];
+}
+
+- (void)reportDidRemove
 {
     [self.contentView.tableView reloadData];
 }

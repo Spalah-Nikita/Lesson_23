@@ -12,6 +12,7 @@
 
 - (NSInteger)reportsCount;
 - (id)reportAtIndex:(NSInteger)index;
+- (void)removeReportAtIndex:(NSInteger)index;
 
 - (void)createNewTestReport;
 - (void)needToReloadData;
@@ -21,6 +22,7 @@
 @protocol ReportModelOutut <NSObject>
 
 - (void)dataDidReload;
+- (void)reportDidRemove;
 
 @end
 
