@@ -13,6 +13,7 @@
 		1A049D131FA8E6B600727BA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A049D121FA8E6B600727BA9 /* Assets.xcassets */; };
 		1A049D161FA8E6B600727BA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A049D141FA8E6B600727BA9 /* LaunchScreen.storyboard */; };
 		1A049D191FA8E6B600727BA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A049D181FA8E6B600727BA9 /* main.m */; };
+		1A19EA6D1FACDB9A001FD109 /* DataManager+Storage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A19EA6C1FACDB9A001FD109 /* DataManager+Storage.m */; };
 		1A4985591FA8EABF008CB530 /* ReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4985581FA8EABF008CB530 /* ReportViewController.m */; };
 		1A49855C1FA8EAEB008CB530 /* ReportView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A49855B1FA8EAEB008CB530 /* ReportView.m */; };
 		1A49855F1FA8EB43008CB530 /* ReportModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A49855E1FA8EB43008CB530 /* ReportModel.m */; };
@@ -35,6 +36,8 @@
 		1A049D151FA8E6B600727BA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A049D171FA8E6B600727BA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A049D181FA8E6B600727BA9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1A19EA6B1FACDB9A001FD109 /* DataManager+Storage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DataManager+Storage.h"; sourceTree = "<group>"; };
+		1A19EA6C1FACDB9A001FD109 /* DataManager+Storage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DataManager+Storage.m"; sourceTree = "<group>"; };
 		1A4985571FA8EABF008CB530 /* ReportViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReportViewController.h; sourceTree = "<group>"; };
 		1A4985581FA8EABF008CB530 /* ReportViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReportViewController.m; sourceTree = "<group>"; };
 		1A49855A1FA8EAEB008CB530 /* ReportView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReportView.h; sourceTree = "<group>"; };
@@ -101,6 +104,15 @@
 				1A049D181FA8E6B600727BA9 /* main.m */,
 			);
 			path = Lesson_23;
+			sourceTree = "<group>";
+		};
+		1A19EA6A1FACDAB5001FD109 /* DataManagerCategory */ = {
+			isa = PBXGroup;
+			children = (
+				1A19EA6B1FACDB9A001FD109 /* DataManager+Storage.h */,
+				1A19EA6C1FACDB9A001FD109 /* DataManager+Storage.m */,
+			);
+			path = DataManagerCategory;
 			sourceTree = "<group>";
 		};
 		1A49854B1FA8E809008CB530 /* ReportModule */ = {
@@ -215,6 +227,7 @@
 		1A4985621FA8FF49008CB530 /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
+				1A19EA6A1FACDAB5001FD109 /* DataManagerCategory */,
 				1A4985631FA8FF6C008CB530 /* Entities */,
 				1A4985661FA9004C008CB530 /* ReportsModel.xcdatamodeld */,
 				1A49857E1FA905B8008CB530 /* DataManager.h */,
@@ -327,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A4985591FA8EABF008CB530 /* ReportViewController.m in Sources */,
+				1A19EA6D1FACDB9A001FD109 /* DataManager+Storage.m in Sources */,
 				1A4985801FA905B8008CB530 /* DataManager.m in Sources */,
 				1A4985761FA9044B008CB530 /* Report+CoreDataClass.m in Sources */,
 				1A4985771FA9044B008CB530 /* Report+CoreDataProperties.m in Sources */,

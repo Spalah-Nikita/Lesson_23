@@ -10,6 +10,7 @@
 #import "ReportModel.h"
 #import "ReportView.h"
 #import "ReportModuleProtocol.h"
+#import "Report+CoreDataProperties.h"
 
 @interface ReportViewController () <ReportModelOutut, ReportViewInput, UITableViewDelegate, UITableViewDataSource>
 
@@ -43,20 +44,39 @@
 {
     self.model.modelOutput = self;
     self.contentView.userInterfaceInput = self;
+    self.contentView.tableView.allowsMultipleSelectionDuringEditing = NO;
+    [self.model needToReloadData];
 }
 
 #pragma mark - TableView DataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return [self.model reportsCount];
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
+    Report *report = [self.model reportAtIndex:indexPath.row];
+    cell.textLabel.text = report.name;
+    
     return cell;
+}
+
+#pragma mark - Report View Input Protocol
+
+- (void)addReportButtonWasTapped
+{
+    [self.model createNewTestReport];
+}
+
+#pragma mark - Report Model Output Protocol
+
+- (void)dataDidReload
+{
+    [self.contentView.tableView reloadData];
 }
 
 @end

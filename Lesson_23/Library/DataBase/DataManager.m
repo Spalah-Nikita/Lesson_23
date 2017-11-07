@@ -16,16 +16,6 @@
 
 @implementation DataManager
 
-- (Report*)createReport
-{
-    return nil;
-}
-
-- (NSArray*)allReports
-{
-    return nil;
-}
-
 + (id)storage
 {
     static DataManager *dataStorage = nil;
